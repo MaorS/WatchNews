@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Watch Extension/NewsInterfaceController.swift"
+            timestampString = "526658067.402327"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "awake(withContext:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Watch_Extension.NewsInterfaceController.awake (withContext : Swift.Optional&lt;Any&gt;) -&gt; ()"
+                  moduleName = "Watch Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maorshams/Documents/Programing/Testes/WatchTest/Watch%20Extension/NewsInterfaceController.swift"
+                  timestampString = "526639554.178993"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "335">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Watch_Extension.NewsInterfaceController.awake (withContext : Swift.Optional&lt;Any&gt;) -&gt; ()"
+                  moduleName = "Watch Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maorshams/Documents/Programing/Testes/WatchTest/Watch%20Extension/NewsInterfaceController.swift"
+                  timestampString = "526639554.180768"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "614">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="CTm-n2-OfJ">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
+    </dependencies>
+    <scenes>
+        <!--newsIC-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="newsIC" id="AgC-eL-Hgc" customClass="NewsInterfaceController" customModule="Watch_Extension">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="ZAi-S9-2r9">
+                            <items>
+                                <table alignment="left" id="4HE-3I-ASn">
+                                    <items>
+                                        <tableRow identifier="cell" id="9fG-80-fS5" customClass="ArticleController" customModule="Watch_Extension">
+                                            <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="a7V-2Y-h1s">
+                                                <items>
+                                                    <label width="1" alignment="left" text="Label" textAlignment="left" id="zcT-KK-EFn">
+                                                        <fontDescription key="font" type="system" pointSize="15"/>
+                                                    </label>
+                                                    <label width="1" alignment="left" text="Date" numberOfLines="0" id="dNs-3p-xbB">
+                                                        <fontDescription key="font" type="italicSystem" pointSize="12"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                            <connections>
+                                                <outlet property="itemDateLabel" destination="zcT-KK-EFn" id="Esy-Th-t7T"/>
+                                                <outlet property="itemTitleLabel" destination="dNs-3p-xbB" id="XVx-ao-OPj"/>
+                                                <segue destination="Wba-uZ-qcJ" kind="push" id="Mao-H1-ZHZ"/>
+                                            </connections>
+                                        </tableRow>
+                                    </items>
+                                </table>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="newsTable" destination="4HE-3I-ASn" id="fmG-BN-LqL"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="460" y="343.5"/>
+        </scene>
+        <!--Article Interface Controller-->
+        <scene sceneID="Ge8-hP-YBR">
+            <objects>
+                <controller id="Wba-uZ-qcJ" customClass="ArticleInterfaceController" customModule="Watch_Extension">
+                    <items>
+                        <imageView alignment="left" id="P5f-vW-bXM"/>
+                        <separator alignment="left" id="cKS-rM-sAH">
+                            <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </separator>
+                        <label width="1" alignment="left" text="description" numberOfLines="0" id="Vqb-om-8HX">
+                            <fontDescription key="font" type="system" weight="medium" pointSize="17"/>
+                        </label>
+                        <separator width="125" alignment="left" alpha="0.5" id="eYf-DT-Nm7"/>
+                        <label width="1" alignment="left" text="author" numberOfLines="0" id="tb5-KT-04W">
+                            <fontDescription key="font" type="italicSystem" pointSize="13"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="articleAuthor" destination="tb5-KT-04W" id="p9q-cv-dFG"/>
+                        <outlet property="articleDescription" destination="Vqb-om-8HX" id="alz-tn-9Ju"/>
+                        <outlet property="articleImage" destination="P5f-vW-bXM" id="9hx-f0-6N8"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="678" y="343"/>
+        </scene>
+        <!--Main Interface Controller-->
+        <scene sceneID="Q4p-ya-Pn4">
+            <objects>
+                <controller id="CTm-n2-OfJ" customClass="MainInterfaceController" customModule="Watch_Extension">
+                    <items>
+                        <label alignment="left" text="Welcome!" numberOfLines="0" id="xKW-4b-shJ">
+                            <fontDescription key="font" type="boldSystem" pointSize="24"/>
+                        </label>
+                        <separator alignment="left" id="fkA-hC-q9O">
+                            <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </separator>
+                        <imageView alignment="center" id="Gph-f1-ufu">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </imageView>
+                        <button width="1" alignment="left" title="Get News" id="mO7-5G-i9B">
+                            <connections>
+                                <action selector="fetchAction" destination="CTm-n2-OfJ" id="EZB-aK-K32"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="activityIndicationImage" destination="Gph-f1-ufu" id="EHU-Ob-JBt"/>
+                        <outlet property="fetchButton" destination="mO7-5G-i9B" id="Eo4-HH-cm3"/>
+                        <outlet property="titleLabel" destination="xKW-4b-shJ" id="4Tl-hu-ATs"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="343"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Watch" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>
