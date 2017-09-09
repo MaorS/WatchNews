@@ -3,8 +3,7 @@
 - [x] Fetch latest news from Google news
 
 # Quick View
-#### Sign in using Touch ID + Add new App
-<img src="demo.gif" width="500">
+<img src="demo.gif" width="200">
 
 
 # License
